@@ -1,0 +1,45 @@
+/* =============================================
+   BASE
+   ============================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: var(--cor-titulo);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    margin-top: 2rem;
+    color: var(--cor-destaque-claro);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

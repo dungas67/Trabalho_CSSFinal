@@ -1,0 +1,218 @@
+/* Components */
+
+/* Banner Animado */
+.banner {
+    overflow: hidden;
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
+    padding: 0.7rem 0;
+    white-space: nowrap;
+}
+
+.banner-texto {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    animation: rolar 20s linear infinite;
+}
+
+@keyframes rolar {
+    from { transform: translateX(100vw); }
+    to   { transform: translateX(-100%); }
+}
+
+/* Galeria */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.galeria img {
+    width: 22%;
+    min-width: 10rem;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* Formulario + Figura */
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 2rem;
+}
+
+.contato-imagem {
+    width: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.formulario fieldset {
+    border: 1px solid var(--cor-destaque);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem 1.2rem;
+}
+
+.formulario legend {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: var(--cor-titulo);
+    padding: 0 0.4rem;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+}
+
+.form-grupo label {
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: var(--cor-primaria);
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: var(--cor-texto);
+    background-color: var(--cor-branco);
+}
+
+.form-grupo--check {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-grupo--check label {
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.formulario button {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
+    padding: 0.7rem 1.4rem;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: var(--cor-primaria);
+}
+
+/* Painel de Fotos */
+.painel-fotos {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 220px 220px 220px;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.painel-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.painel-item--grande {
+    grid-row: span 2;
+}
+
+.painel-item--largo {
+    grid-column: span 2;
+}
+
+/* Referencias */
+#referencias {
+    background-color: var(--cor-fundo-refs);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+/* Botao topo */
+.botao-topo {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
+    padding: 0.7rem 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.botao-topo:hover {
+    background-color: var(--cor-primaria);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-fotos {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .painel-item {
+        height: 160px;
+    }
+
+    .painel-item--grande {
+        grid-row: span 1;
+        grid-column: span 2;
+        height: 200px;
+    }
+
+    .painel-item--largo {
+        grid-column: span 2;
+        height: 200px;
+    }
+
+    .galeria img {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .painel-fotos {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-item,
+    .painel-item--grande,
+    .painel-item--largo {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 180px;
+    }
+}

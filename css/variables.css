@@ -1,0 +1,15 @@
+/* =============================================
+   VARIÁVEIS CSS
+   ============================================= */
+:root {
+    --cor-primaria: #2d1b69;
+    --cor-secundaria: #1a0f3d;
+    --cor-destaque: #4c2fa0;
+    --cor-destaque-claro: #5c3dbf;
+    --cor-titulo: #3b1f8c;
+    --cor-fundo: #f5f3ff;
+    --cor-fundo-refs: #ede8ff;
+    --cor-texto: #222222;
+    --cor-branco: #ffffff;
+    --cor-borda: #cccccc;
+}
