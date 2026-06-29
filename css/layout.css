@@ -1,8 +1,6 @@
-/* =============================================
-   LAYOUT
-   ============================================= */
+/* Layourt*/
 
-/* HEADER */
+/* Header */
 header {
     background-color: var(--cor-primaria);
     color: var(--cor-branco);
@@ -23,7 +21,7 @@ header {
     height: auto;
 }
 
-/* NAV */
+/* Nav */
 nav {
     background-color: var(--cor-secundaria);
 }
@@ -49,7 +47,7 @@ nav a:hover {
     background-color: var(--cor-destaque);
 }
 
-/* MAIN */
+/* Main */
 main {
     max-width: 90%;
     margin: 0 auto;
@@ -65,7 +63,7 @@ section img {
     margin: 1rem 0;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
     background-color: var(--cor-secundaria);
     color: var(--cor-branco);
@@ -73,7 +71,7 @@ footer {
     padding: 1.5rem;
 }
 
-/* TOPO FINAL */
+/* Topo Final */
 .topo-final {
     display: flex;
     justify-content: center;
